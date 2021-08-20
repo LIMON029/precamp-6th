@@ -3,10 +3,15 @@ function checkFilled(){
     const name = document.getElementById("name").value
     const password1 = document.getElementById("password1").value
     const password2 = document.getElementById("password2").value
-    const sendbtn = document.getElementById("sendButton")
+    const sendOkBtn = document.getElementById("sendOkButton").innerText
+    const regionSelect = document.getElementById("regionSelect")
+    const selectedRegion = regionSelect.options[regionSelect.selectedIndex].value
+    const sexSelect = document.getElementsByName("성별")
+    const agreementCheck = document.getElementById("agreement")
 
     if(email !== "" && name !== "" && password1 !== "" && password2 !== ""
-    && sendbtn.getAttribute("disabled")===null){
+    && sendOkBtn === "인증완료" && selectedRegion !== "지역을 선택하세요."
+    && (sexSelect[0].checked || sexSelect[1].checked) && agreementCheck.checked){
         document.getElementById("signup").removeAttribute("disabled")
     } else {
         document.getElementById("signup").setAttribute("disabled", "")

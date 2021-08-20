@@ -30,20 +30,20 @@
         </div>
         <div class="phoneAuthCheck">
             <div id="timer">3:00</div>
-            <button id="sendOkButton" disabled>인증확인</button>
+            <button id="sendOkButton" disabled>인증완료</button>
         </div>
-        <select name="region" id="regionSelect">
+        <select name="region" id="regionSelect" onchange="checkFilled()" onkeyup="onchange()">
             <option disabled selected>지역을 선택하세요.</option>
             <option>서울</option>
             <option>경기</option>
             <option>인천</option>
         </select>
         <div class="sexSelectWrapper">
-            <input type="radio" name="성별" id="woman"> <span>여성</span>
-            <input type="radio" name="성별" id="man"> <span>남성</span>
+            <input type="radio" name="성별" id="woman" onchange="checkFilled()" onkeyup="onchange()"> <span>여성</span>
+            <input type="radio" name="성별" id="man" onchange="checkFilled()" onkeyup="onchange()"> <span>남성</span>
         </div>
         <div class="agreement">
-            <input type="checkbox" name="agreement" id="agreement">
+            <input type="checkbox" name="agreement" id="agreement" onchange="checkFilled()" onkeyup="onchange()">
             <span class="agreementText">이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.</span>
         </div>
         <div class="buttonWrapper">
