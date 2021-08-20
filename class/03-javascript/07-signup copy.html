@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <script>
+        function checkValidation() {
+            // 이메일 내용이 채워져있는지, 비밀번호1과 비밀번호2가 채워져있는지
+            const email = document.getElementById("email").value
+            const password1 = document.getElementById("password1").value
+            const password2 = document.getElementById("password2").value
+            const error = [false, false]
+
+            if(email!=="" && !email.includes("@")) {
+                document.getElementById("emailCheck").innerText = "이메일이 잘못되었습니다."
+                document.getElementById("emailCheck").style = "color: red; font-size: 10px;"
+                error[0] = true
+            } else {
+                document.getElementById("emailCheck").innerText = ""
+                error[0] = false
+            }
+
+            if(password1 !== password2 && password2 !== "") {
+                document.getElementById("passwordCheck").innerText = "같은 비밀번호를 입력해주세요."
+                document.getElementById("passwordCheck").style = "color: red; font-size: 10px;"
+                error[1] = true
+            }  else {
+                document.getElementById("passwordCheck").innerText = ""
+                error[1] = false
+            }
+
+            if(email !== "" && password1 !== "" && password2 !== "" && !(error[0]||error[1])) {
+                document.getElementById("signup").style = "background-color: yellow;"
+                document.getElementById("signup").removeAttribute("disabled")
+            } else {
+                document.getElementById("signup").style = ""
+                document.getElementById("signup").setAttribute("disabled","")
+            }
+        }
+
+        function check() {
+            const email = document.getElementById("email").value
+            const password1 = document.getElementById("password1").value
+            const password2 = document.getElementById("password2").value
+        }
+    </script>
+</head>
+<body>
+    <input id="email" type="text" placeholder="이메일을 입력해 주세요." onchange="checkValidation()" onkeyup="onchange()"/>
+    <span id="emailCheck"></span><br/>
+    <input id="password1" type="password" placeholder="비밀번호를 입력해 주세요." onchange="checkValidation()" onkeyup="onchange()"/><br/>
+    <input id="password2" type="password" placeholder="비밀번호를 확인해 주세요." onchange="checkValidation()" onkeyup="onchange()"/>
+    <span id="passwordCheck"></span><br/>
+    <button id="signup" onclick="check()" disabled>회원가입</button>
+</body>
+</html>

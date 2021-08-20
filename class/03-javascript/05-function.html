@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>인증번호실습</title>
+    <style>
+        #btn {
+            display: inline;
+        }
+    </style>
+    <script>
+        const sendToken = () => {
+            const token = String(Math.floor(Math.random() * 1000000)).padStart(6, '0')
+            document.getElementById("token").innerText = token
+            document.getElementById("token").style.color = "red"
+            document.getElementById("submit__btn").removeAttribute("disabled");
+            let timer = 9
+            setInterval(() => {
+                if (timer >= 0) {
+                    document.getElementById("timer").innerText = timer
+                    if(timer === 0) {
+                        document.getElementById("submit__btn").setAttribute("disabled", "")
+                    }
+                    timer -= 1
+                }
+            }, 1000)
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <span id="token">000000</span>
+        <button id="token__btn" onclick="sendToken()">인증번호 전송</button>
+    </div>
+    <div>
+        <span id="timer">10</span>
+        <button id="submit__btn">인증완료</button>
+    </div>
+</body>
+
+</html>

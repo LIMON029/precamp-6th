@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="final.css">
+    <script src="final.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">회원가입</div>
+        <div class="emailWrapper">
+            <input id="email" type="text" placeholder="이메일을 입력해 주세요.">
+            <div id="emailCheck" class="checkMsg"> </div>
+        </div>
+        <input id="name" type="text" placeholder="이름을 입력해 주세요." onchange="checkFilled()" onkeyup="onchange()">
+        <div class="passwordWrapper">
+            <input id="password1" type="text" placeholder="비밀번호를 입력해 주세요." onchange="checkFilled()" onkeyup="onchange()">
+            <div id="passwordCheck1" class="checkMsg"> </div>
+            <input id="password2" type="text" placeholder="비밀번호를 다시 입력해 주세요." onchange="checkFilled()" onkeyup="onchange()">
+            <div id="passwordCheck2" class="checkMsg"> </div>
+        </div>
+        <div class="phone">
+            <input id="phone1" type="text" size="3" maxlength="3" onchange="phone1Focus()" onkeyup="onchange()"> -
+            <input id="phone2" type="text" size="4" maxlength="4" onchange="phone2Focus()" onkeyup="onchange()"> -
+            <input id="phone3" type="text" size="4" maxlength="4" onchange="sendButtonActivate()" onkeyup="onchange()">
+        </div>
+        <div class="phoneAuthSend">
+            <div id="token">000000</div>
+            <button id="sendButton" disabled onclick="phoneAuth()">인증번호 전송</button>
+        </div>
+        <div class="phoneAuthCheck">
+            <div id="timer">3:00</div>
+            <button id="sendOkButton" disabled>인증확인</button>
+        </div>
+        <select name="region" id="regionSelect">
+            <option disabled selected>지역을 선택하세요.</option>
+            <option>서울</option>
+            <option>경기</option>
+            <option>인천</option>
+        </select>
+        <div class="sexSelectWrapper">
+            <input type="radio" name="성별" id="woman"> <span>여성</span>
+            <input type="radio" name="성별" id="man"> <span>남성</span>
+        </div>
+        <div class="agreement">
+            <input type="checkbox" name="agreement" id="agreement">
+            <span class="agreementText">이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.</span>
+        </div>
+        <div class="buttonWrapper">
+            <button id="signup" disabled onclick="checkValidation()">가입하기</button>
+        </div>
+    </div>
+</body>
+</html>

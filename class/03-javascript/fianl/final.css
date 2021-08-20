@@ -1,0 +1,83 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 250px;
+    height: 550px;
+    margin: auto;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.wrapper > * {
+    width: 100%;
+}
+
+.emailWrapper input, .passwordWrapper input{
+    width: 100%;
+    display: block;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.passwordWrapper {
+    height: 102px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checkMsg {
+    height: 10px;
+    font-size: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.wrapper > input {
+    display: block;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.phone {
+    text-align: center;
+}
+
+.phone > input {
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.phoneAuthSend, .phoneAuthCheck {
+    display: flex;
+    justify-content: space-between;
+}
+
+#token, #timer {
+    width: 60px;
+    text-align: center;
+}
+
+.phoneAuthSend button, .phoneAuthCheck button {
+    width: 150px;
+}
+
+.sexSelectWrapper {
+    text-align: center;
+}
+
+.buttonWrapper {
+    text-align: center;
+}

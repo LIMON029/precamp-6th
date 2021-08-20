@@ -1,0 +1,155 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wrapper__header {
+    padding: 0px 30px;
+    width: 100%;
+    height: 25px;
+}
+
+.wrapper__header .title {
+    color: #55b2d4;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.wrapper__header .subtitle {
+    font-size: 8px;
+}
+
+.wrapper__header .underline {
+    width: 464px;
+    border-bottom: 1px solid #999999;
+    padding-top: 8px;
+}
+
+.wrapper__word {
+    width: 222px;
+    height: 168px;
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    font-weight: 700;
+    border: 1px solid #999999;
+    border-radius: 10px;
+}
+
+.wrapper__word .icon {
+    width: 40px;
+    height: 20px;
+    background-image: url("../images/word.png");
+}
+
+.wrapper__word .title, .wrapper__lotto .title{
+    font-size: 15px;
+}
+
+.wrapper__word .subtitle, .wrapper__lotto .subtitle {
+    color: #999999;
+    font-size: 10px;
+}
+
+.wrapper__word .searchWrapper {
+    width: 182px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.searchWrapper .searchWord{
+    color: #999999;
+    font-size: 11px;
+    width: 136px;
+    height: 24px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding-left: 8px;
+    font-weight: 700;
+}
+
+.searchWrapper button {
+    width: 38px;
+    height: 24px;
+    font-size: 11px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.wrapper__word .result {
+    color: #999999;
+    font-size: 11px;
+}
+
+.wrapper__lotto {
+    width: 222px;
+    height: 168px;
+    background-color: #F6F6F6;
+    border: 1px solid #999999;
+    border-radius: 10px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.wrapper__lotto__header {
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper__lotto .icon {
+    width: 26px;
+    height: 28px;
+    background-image: url("../images/lotto.png");
+    background-repeat : no-repeat;
+    background-size : cover;
+}
+
+.wrapper__lotto__body {
+    width: 130px;
+    background-color: #FFE400;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    display: flex;
+	justify-content: space-between;
+	padding: 5px 8px;
+}
+
+.wrapper__lotto__btn {
+    width: 62px;
+    height: 24px;
+    font-size: 11px;
+    font-weight: 700;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}

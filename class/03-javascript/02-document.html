@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>DOM조작하기</title>
+    <script>
+        function aaa(){
+            document.getElementById("zzz").innerText = "반갑습니다"
+        }
+
+        function counter(){
+            const temp = Number(document.getElementById("count").innerText) + 1
+            document.getElementById("count").innerText = temp
+        }
+    </script>
+</head>
+<body>
+    <div id="zzz">안녕하세요</div>
+    <button onclick="aaa()">버튼클릭!!!</button>
+
+    <div id="count">0</div>
+    <button onclick="counter()">카운트 증가!!!</button>
+</body>
+</html>
